@@ -1,3 +1,4 @@
+//Question 316
 //Approach-1 (Doing simply just like Pascal triangle is formed)
 class Solution {
 public:
