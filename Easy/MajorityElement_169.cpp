@@ -1,3 +1,27 @@
+// //Question 56 june26
+// class Solution {
+// public:
+//     int majorityElement(vector<int>& nums) {
+//         unordered_map<int, int> frqMap;
+//         int n = nums.size();
+        
+//         for (int x : nums) {
+//             frqMap[x]++;
+//         }
+        
+//         for (auto it : frqMap) {
+//             if (it.second > n / 2) {
+//                 return it.first;
+//             }
+//         }
+        
+//         return -1;
+//     }
+// };
+
+
+//Followe - o(n) , O(1)  linear time and in O(1) space
+
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
