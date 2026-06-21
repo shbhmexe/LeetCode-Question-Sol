@@ -1,15 +1,23 @@
+//Quesiton 65 june26
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
-        map<int , int> mp;
-        mp[0] = 1;
-        int preSum = 0 , cnt = 0;
-        for(int i = 0; i < nums.size(); i++){
-            preSum += nums[i];
-            int remove = preSum - k;
-            cnt+= mp[remove];
-            mp[preSum]+= 1;
+    unordered_map<int, int> mp;
+    mp[0] = 1; 
+    
+    int count = 0;
+    int currentSum = 0;
+    
+    for (int i = 0; i < nums.size(); i++) {
+        currentSum += nums[i];
+        
+        if (mp.find(currentSum - k) != mp.end()) {
+            count += mp[currentSum - k]; 
         }
-        return cnt;
+        
+        mp[currentSum]++;
+    }
+    
+    return count;
     }
 };
