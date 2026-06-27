@@ -1,9 +1,9 @@
-//Question 270
+//Question 87 june26
 class Solution {
 public:
     int romanToInt(string s) {
         int res = 0;
-        unordered_map<char, int> roman = {
+        map<char, int> roman = {
             {'I', 1},
             {'V', 5},
             {'X', 10}, 
