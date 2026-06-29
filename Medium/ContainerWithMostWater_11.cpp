@@ -1,3 +1,4 @@
+//Question 108 june26
 class Solution {
 public:
     int maxArea(vector<int>& height) {
@@ -5,7 +6,7 @@ public:
         int i = 0, j = n-1;
         
         int water = 0;
-        while(i<j) {
+        while(i < j) {
             
             //start from the smallest one and calculate water
             int h = min(height[i], height[j]);
